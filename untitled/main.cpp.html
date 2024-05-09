@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>main.cpp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #b3ae60;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #bcbec4;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.cpp</font>
+</center></td></tr></table>
+<pre><span class="s0">#include </span><span class="s2">&lt;iostream&gt;</span>
+<span class="s0">#include </span><span class="s2">&quot;Zoologico.h&quot;</span>
+<span class="s0">#include </span><span class="s2">&quot;Perro.h&quot;</span>
+<span class="s0">#include </span><span class="s2">&quot;Gato.h&quot;</span>
+<span class="s0">#include </span><span class="s2">&quot;Leon.h&quot;</span>
+
+<span class="s3">int </span><span class="s1">main</span><span class="s4">() {</span>
+    <span class="s1">Perro miPerro</span><span class="s4">(</span><span class="s2">&quot;Bobby&quot;</span><span class="s4">, </span><span class="s2">&quot;20cm&quot;</span><span class="s4">, </span><span class="s5">10</span><span class="s4">, </span><span class="s2">&quot;pug&quot;</span><span class="s4">, </span><span class="s2">&quot;Rodrigo&quot;</span><span class="s4">);</span>
+    <span class="s1">Gato miGato</span><span class="s4">(</span><span class="s2">&quot;Whiskers&quot;</span><span class="s4">, </span><span class="s2">&quot;15cm&quot;</span><span class="s4">, </span><span class="s5">5</span><span class="s4">, </span><span class="s2">&quot;callegero&quot;</span><span class="s4">, </span><span class="s2">&quot;naranja&quot;</span><span class="s4">);</span>
+    <span class="s1">Leon miLeon</span><span class="s4">(</span><span class="s2">&quot;Simba&quot;</span><span class="s4">, </span><span class="s2">&quot;100cm&quot;</span><span class="s4">, </span><span class="s5">150</span><span class="s4">, </span><span class="s2">&quot;lider&quot;</span><span class="s4">,</span><span class="s2">&quot;gaselas&quot;</span><span class="s4">);</span>
+
+    <span class="s1">std</span><span class="s4">::</span><span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;Mi perro hace: &quot; </span><span class="s4">&lt;&lt; </span><span class="s1">miPerro</span><span class="s4">.</span><span class="s1">obtenerSonido</span><span class="s4">() &lt;&lt; </span><span class="s1">std</span><span class="s4">::</span><span class="s1">endl</span><span class="s4">;</span>
+    <span class="s1">std</span><span class="s4">::</span><span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;Mi gato hace: &quot; </span><span class="s4">&lt;&lt; </span><span class="s1">miGato</span><span class="s4">.</span><span class="s1">obtenerSonido</span><span class="s4">() &lt;&lt; </span><span class="s1">std</span><span class="s4">::</span><span class="s1">endl</span><span class="s4">;</span>
+    <span class="s1">std</span><span class="s4">::</span><span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;Mi leon hace: &quot; </span><span class="s4">&lt;&lt; </span><span class="s1">miLeon</span><span class="s4">.</span><span class="s1">obtenerSonido</span><span class="s4">() &lt;&lt; </span><span class="s1">std</span><span class="s4">::</span><span class="s1">endl</span><span class="s4">;</span>
+
+<span class="s4">}</span>
+</pre>
+</body>
+</html>

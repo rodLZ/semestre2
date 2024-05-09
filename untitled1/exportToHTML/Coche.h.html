@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Coche.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #b3ae60;}
+.s3 { color: #6aab73;}
+.s4 { color: #cf8e6d;}
+.s5 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Coche.h</font>
+</center></td></tr></table>
+<pre><span class="s0">//</span>
+<span class="s0">// Created by zamor on 12/03/2024.</span>
+<span class="s0">//</span>
+<span class="s2">#include </span><span class="s3">&lt;iostream&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;string&gt;</span>
+
+<span class="s2">#ifndef </span><span class="s1">COCHE_H</span>
+<span class="s2">#define </span><span class="s1">COCHE_H</span>
+
+
+<span class="s4">class </span><span class="s1">Coche </span><span class="s5">{</span>
+<span class="s4">public</span><span class="s5">:</span>
+    <span class="s1">Coche</span><span class="s5">() = </span><span class="s4">default</span><span class="s5">;</span>
+    <span class="s1">Coche</span><span class="s5">(</span><span class="s4">int </span><span class="s1">valor</span><span class="s5">);</span>
+    <span class="s1">Coche</span><span class="s5">(</span><span class="s4">const </span><span class="s1">Coche </span><span class="s5">&amp;</span><span class="s1">coche</span><span class="s5">);</span>
+    <span class="s1">Coche</span><span class="s5">(</span><span class="s1">Coche </span><span class="s5">&amp;&amp;</span><span class="s1">coche</span><span class="s5">) </span><span class="s4">noexcept</span><span class="s5">; </span><span class="s0">// Cambiado aquí</span>
+    <span class="s1">Coche</span><span class="s5">(</span><span class="s4">const </span><span class="s1">std</span><span class="s5">::</span><span class="s1">string </span><span class="s5">&amp;</span><span class="s1">marca</span><span class="s5">, </span><span class="s4">const </span><span class="s1">std</span><span class="s5">::</span><span class="s1">string </span><span class="s5">&amp;</span><span class="s1">modelo</span><span class="s5">, </span><span class="s4">int </span><span class="s1">anio</span><span class="s5">, </span><span class="s4">const </span><span class="s1">std</span><span class="s5">::</span><span class="s1">string </span><span class="s5">&amp;</span><span class="s1">kilo</span><span class="s5">, </span><span class="s4">const </span><span class="s1">std</span><span class="s5">::</span><span class="s1">string </span><span class="s5">&amp;</span><span class="s1">duenio</span><span class="s5">);</span>
+    <span class="s5">~</span><span class="s1">Coche</span><span class="s5">() = </span><span class="s4">default</span><span class="s5">;</span>
+
+    <span class="s1">Coche </span><span class="s5">&amp;</span><span class="s4">operator</span><span class="s5">=(</span><span class="s4">const </span><span class="s1">Coche </span><span class="s5">&amp;</span><span class="s1">coche</span><span class="s5">);</span>
+    <span class="s1">Coche </span><span class="s5">&amp;</span><span class="s4">operator</span><span class="s5">=(</span><span class="s1">Coche </span><span class="s5">&amp;&amp;</span><span class="s1">coche</span><span class="s5">) </span><span class="s4">noexcept</span><span class="s5">;</span>
+    <span class="s1">Coche </span><span class="s5">&amp;</span><span class="s4">operator</span><span class="s5">=(</span><span class="s4">int </span><span class="s1">valor</span><span class="s5">);</span>
+    <span class="s1">Coche </span><span class="s5">&amp;</span><span class="s4">operator</span><span class="s5">+(</span><span class="s4">const </span><span class="s1">Coche </span><span class="s5">&amp;</span><span class="s1">coche</span><span class="s5">);</span>
+    <span class="s1">Coche </span><span class="s5">&amp;</span><span class="s4">operator</span><span class="s5">+(</span><span class="s4">int </span><span class="s1">valor</span><span class="s5">);</span>
+    <span class="s1">Coche </span><span class="s5">&amp;</span><span class="s4">operator</span><span class="s5">-(</span><span class="s4">const </span><span class="s1">Coche </span><span class="s5">&amp;</span><span class="s1">coche</span><span class="s5">);</span>
+    <span class="s1">Coche </span><span class="s5">&amp;</span><span class="s4">operator</span><span class="s5">-(</span><span class="s4">int </span><span class="s1">valor</span><span class="s5">);</span>
+
+    <span class="s4">int </span><span class="s1">getValor</span><span class="s5">() </span><span class="s4">const</span><span class="s5">;</span>
+    <span class="s4">void </span><span class="s1">setValor</span><span class="s5">(</span><span class="s4">int </span><span class="s1">newValor</span><span class="s5">);</span>
+
+
+<span class="s4">private</span><span class="s5">:</span>
+    <span class="s1">std</span><span class="s5">::</span><span class="s1">string marca</span><span class="s5">;</span>
+    <span class="s1">std</span><span class="s5">::</span><span class="s1">string modelo</span><span class="s5">;</span>
+    <span class="s4">int </span><span class="s1">anio</span><span class="s5">;</span>
+    <span class="s1">std</span><span class="s5">::</span><span class="s1">string kilo</span><span class="s5">;</span>
+    <span class="s1">std</span><span class="s5">::</span><span class="s1">string duenio</span><span class="s5">;</span>
+    <span class="s4">int </span><span class="s1">svalor</span><span class="s5">;</span>
+    <span class="s1">std</span><span class="s5">::</span><span class="s1">string Rodrigo </span><span class="s5">= </span><span class="s3">&quot;rodrigo&quot;</span><span class="s5">;</span>
+<span class="s5">};</span>
+
+<span class="s2">#endif </span><span class="s0">// COCHE_H</span>
+
+</pre>
+</body>
+</html>
